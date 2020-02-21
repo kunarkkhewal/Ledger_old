@@ -1,0 +1,16 @@
+{
+  "name": "ledger",
+  "version": "1.0.0",
+  "description": "personal project for expenses management",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kunark Khewal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
