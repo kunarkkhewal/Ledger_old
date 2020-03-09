@@ -5,10 +5,13 @@ const ExpenseForm = () => {
     return(
         <div>
             <form action="">
-                <input type="text" placeholder="Enter Amount" required />
-                <div>
-                    <button type="submit">+ (Money coming)</button>
-                    <button type="submit">- (Money going)</button>
+                <div className="form-input-container">
+                    <input type="text" placeholder="Enter Amount*" required />
+                    <input type="text" placeholder="Remarks"/>
+                </div>
+                <div className="form-button-container">
+                    <button className="form-button" id="money-coming-button" type="submit">Money Coming</button>
+                    <button className="form-button" id="money-going-button" type="submit">Money Going</button>
                 </div>
             </form>
         </div>

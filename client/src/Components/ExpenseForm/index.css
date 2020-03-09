@@ -1,4 +1,50 @@
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 47%;
+}
+
 input {
-    display: inline-block;
-    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 25px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 5px 0;
+    padding: 5px 0;
+    color: #666;
+    outline: none;
+}
+
+input::placeholder {
+    text-align: center;
+    color: #666;
+}
+
+.form-button-container {
+    margin: 5px auto;
+    width: 48%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-button {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 2% 7%;
+    font-size: 1em;
+    background-color: white;
+    font-weight: 900;
+    outline: none;
+    width: 47%;
+}
+
+#money-coming-button {
+    color: green;
+}
+
+#money-going-button {
+    color: red;
 }
