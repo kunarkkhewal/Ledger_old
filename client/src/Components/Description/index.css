@@ -1,0 +1,22 @@
+.description-container {
+    margin-top: 40px;
+}
+
+.description-table {
+    margin: 0 auto 40px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.description-table thead td {
+    font-size: 1.5em;
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+}
+
+.description-table tbody td {
+    font-size: 1.2em;
+    color: #333;
+}

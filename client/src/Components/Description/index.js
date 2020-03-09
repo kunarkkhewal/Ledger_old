@@ -1,19 +1,18 @@
 import React from 'react';
+import './index.css'
 
 const Description = () => {
     return(
-        <div>
-            <table>
+        <div className="description-container">
+            <table className="description-table">
                 <thead>
                     <td>Description</td>
                     <td>Amount</td>
-                    <td>Category</td>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Netflix</td>
                         <td>-799</td>
-                        <td>wanting</td>
                     </tr>
                 </tbody>
             </table>
