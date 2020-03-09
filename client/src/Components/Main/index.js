@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css'
 import Filter from '../Filter';
 import ExpenseForm from '../ExpenseForm';
-import Description from '../Description';
+import Transactions from '../Transactions';
 import Summary from '../Summary';
 
 
@@ -14,7 +14,7 @@ const Main = () => {
             </div>
             <div className="main-section">
                 <ExpenseForm />
-                <Description />
+                <Transactions />
             </div>
             <div className="right-section">
                 <Summary />

@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.css'
 
-const Description = () => {
+const Transactions = () => {
     return(
-        <div className="description-container">
-            <table className="description-table">
+        <div className="transactions-container">
+            <table className="transactions-table">
                 <thead>
                     <td>Description</td>
                     <td>Amount</td>
@@ -20,4 +20,4 @@ const Description = () => {
     )
 }
 
-export default Description;
+export default Transactions;
