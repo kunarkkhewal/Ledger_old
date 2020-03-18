@@ -1,18 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './index.css'
 
 const ExpenseForm = () => {
+
+    const [amount, setAmount] = useState(0);
+    const [remark, setRemark] = useState("");
+    const [type, setType] = useState("");
+
+    const handleOnSubmit = event => {
+        event.preventDefault();
+
+        setAmount(event.target[0].value);
+        setRemark(event.target[1].value);
+
+        event.target.reset();
+    }
+
+    const handleMoneyTypeChange = event => {
+        setType(event.target.value);
+    }
+
     return(
         <div>
-            <form action="">
+            <form onSubmit={handleOnSubmit}>
                 <div className="form-input-container">
                     <input type="text" placeholder="Enter Amount*" required />
                     <input type="text" placeholder="Remarks"/>
                 </div>
                 <div className="form-button-container">
-                    <button className="form-button" id="money-coming-button" type="submit">Money Coming</button>
-                    <button className="form-button" id="money-going-button" type="submit">Money Going</button>
+                    <label htmlFor="money-type"></label>
+                    <input type="radio" name="money-type" id="money-coming" value="money-coming" onChange={handleMoneyTypeChange} required />Money Coming
+                    <input type="radio" name="money-type" id="money-going" value="money-going" onChange={handleMoneyTypeChange} required/>Money Going
                 </div>
+                <button type="submit">submit</button>
             </form>
         </div>
     )
