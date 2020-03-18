@@ -1,13 +1,15 @@
-import React from 'react';
-import './index.css'
+import React from "react";
+import "./index.css";
 
 const Transactions = () => {
-    return(
+    return (
         <div className="transactions-container">
             <table className="transactions-table">
                 <thead>
-                    <td>Description</td>
-                    <td>Amount</td>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
@@ -17,7 +19,7 @@ const Transactions = () => {
                 </tbody>
             </table>
         </div>
-    )
-}
+    );
+};
 
 export default Transactions;
