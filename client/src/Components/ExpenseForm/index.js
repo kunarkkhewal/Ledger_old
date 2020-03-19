@@ -1,11 +1,16 @@
 import React, {useState} from 'react';
 import './index.css'
+import Axios from 'axios';
 
 const ExpenseForm = () => {
 
     const [amount, setAmount] = useState(0);
     const [remark, setRemark] = useState("");
     const [type, setType] = useState("");
+
+    const postDataRequest = ()=> {
+        Axios.post("http://localhost:5005/", {amount, remark, type})
+    }
 
     const handleOnSubmit = event => {
         event.preventDefault();
@@ -14,6 +19,7 @@ const ExpenseForm = () => {
         setRemark(event.target[1].value);
 
         event.target.reset();
+        postDataRequest();
     }
 
     const handleMoneyTypeChange = event => {
