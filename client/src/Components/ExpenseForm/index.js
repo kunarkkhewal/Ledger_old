@@ -8,18 +8,33 @@ const ExpenseForm = () => {
     const [remark, setRemark] = useState("");
     const [type, setType] = useState("");
 
-    const postDataRequest = ()=> {
-        Axios.post("http://localhost:5005/", {amount, remark, type})
+    const postDataRequest = transactionData => {
+        Axios.post("http://localhost:5005/", transactionData)
+            .then(data => {
+                
+            })
+            .catch(error => {
+                console.log("----- DATA SAVE OPERATION FAILED ----- ", error)
+            })
     }
 
     const handleOnSubmit = event => {
         event.preventDefault();
-
-        setAmount(event.target[0].value);
-        setRemark(event.target[1].value);
-
         event.target.reset();
-        postDataRequest();
+        const transactionData = {
+            amount,
+            remark,
+            type
+        }
+        postDataRequest(transactionData);
+    }
+
+    const handleAmountChange = event => {
+        setAmount(event.target.value);
+    }
+
+    const handleRemarkChange = event => {
+        setRemark(event.target.value);
     }
 
     const handleMoneyTypeChange = event => {
@@ -30,8 +45,8 @@ const ExpenseForm = () => {
         <div>
             <form onSubmit={handleOnSubmit}>
                 <div className="form-input-container">
-                    <input type="text" placeholder="Enter Amount*" required />
-                    <input type="text" placeholder="Remarks"/>
+                    <input onChange={handleAmountChange} type="text" placeholder="Enter Amount*" required />
+                    <input onChange={handleRemarkChange} type="text" placeholder="Remarks"/>
                 </div>
                 <div className="form-button-container">
                     <label htmlFor="money-type"></label>
