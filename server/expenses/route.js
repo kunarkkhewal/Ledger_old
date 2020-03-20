@@ -13,9 +13,9 @@ router.get("/", function(req, res) {
     res.send("get route");
 });
 
-router.post("/", function(req, res) {
-    console.log(" -------- post request req => ", req.body)
-    //res.send("post route");
+router.post("/", async (req, res) => {
+    const response = await expensesController.addExpenses(req.body);
+    res.send(response);
 });
 
 module.exports = router;
