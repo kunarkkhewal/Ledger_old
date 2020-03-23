@@ -8,9 +8,9 @@ const expensesController = require('./controller');
 //     next();
 // });
 
-router.get("/", function(req, res) {
-    expensesController.getExpenses();
-    res.send("get route");
+router.get("/", async (req, res) => {
+    const response = await expensesController.getExpenses();
+    res.send(response);
 });
 
 router.post("/", async (req, res) => {

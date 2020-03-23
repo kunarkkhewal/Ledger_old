@@ -1,7 +1,8 @@
 const expenses = require('./model'); //Model import
 
 const getExpenses = () => {
-    return "getExpenses"
+    const expensesData = expenses.find()
+    return expensesData;
 }
 
 const addExpenses = async expense => {
