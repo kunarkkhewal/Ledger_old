@@ -9,16 +9,16 @@ import Summary from '../Summary';
 const Main = () => {
     return (
         <div className="main-component">
-            <div className="left-section">
+            {/* <div className="left-section">
                 <Filter />
-            </div>
+            </div> */}
             <div className="main-section">
                 <ExpenseForm />
                 <Transactions />
             </div>
-            <div className="right-section">
+            {/* <div className="right-section">
                 <Summary />
-            </div>
+            </div> */}
         </div>
     )
 }

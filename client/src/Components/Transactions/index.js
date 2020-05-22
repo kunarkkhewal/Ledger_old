@@ -13,7 +13,7 @@ const Transactions = () => {
       .catch(error => {
         console.log("----- DATA FETCH OPERATION FAILED ----- ", error);
       });
-  }, []);
+  }, [expensesData]);
 
   return (
     <div className="transactions-container">

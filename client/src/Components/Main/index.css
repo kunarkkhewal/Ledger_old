@@ -1,5 +1,5 @@
 .main-component {
-    padding: 4%;
+    padding: 4% 30%;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -17,5 +17,5 @@
 .main-section {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
 }
