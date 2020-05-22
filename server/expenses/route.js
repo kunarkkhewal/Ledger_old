@@ -8,12 +8,12 @@ const expensesController = require('./controller');
 //     next();
 // });
 
-router.get("/", async (req, res) => {
+router.get("/home", async (req, res) => {
     const response = await expensesController.getExpenses();
     res.send(response);
 });
 
-router.post("/", async (req, res) => {
+router.post("/home", async (req, res) => {
     const response = await expensesController.addExpenses(req.body);
     res.send(response);
 });
